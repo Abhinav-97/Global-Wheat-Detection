@@ -31,7 +31,7 @@ For installing NVIDIA Apex run script:
 
 #### For training run:
 
-```python train.py --train_csv_path train.csv --train_dir train --test_dir test --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40```
+```python train.py --train_csv_path train.csv --train_dir train --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40```
 
 ## Inference Details
 
@@ -45,3 +45,11 @@ For installing NVIDIA Apex run script:
   <img src="images/TTA-prediction.jpeg" width="40%" />
   <img src="images/Deaugment-image.jpeg" width="40%" /> 
 </p>
+
+#### To run predictions with TTA:
+```python InferenceTTA.py --test_dir test --model_path best-checkpoint.bin --image_size 1024 ```
+
+* Finally to further boost model performance we make predictions with TTA and then train model with pseudo labelling.Then the final predictions are made with the pseudo labelled trained model.
+
+#### To run pseudo labelling:
+
