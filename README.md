@@ -20,3 +20,15 @@ Our solution was to train [EfficientDet Architecture](https://github.com/rwightm
   <img src="images/Image_Augmented-2.jpeg" width="30%" /> 
   <img src="images/Image_Augmented-1.jpeg" width="30%" /> 
 </p>
+
+For Setup run:
+
+```pip install requirements.txt```
+
+For installing NVIDIA Apex run script:
+
+```nvidia_apex_setup.sh```
+
+For training run:
+
+```python train.py```
