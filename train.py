@@ -46,7 +46,6 @@ seed_everything(SEED)
 parser = argparse.ArgumentParser()
 parser.add_argument('--train_csv_path', type=str, default='train.csv', help='train csv path')
 parser.add_argument('--train_dir', type=str, default='train', help='train directory path')
-parser.add_argument('--test_dir', type=str, default='test', help='test directory path')
 parser.add_argument('--weights_path', type=str, default='', help='model_weights_path')
 parser.add_argument('--image_size', type=int, default=1024, help='image Size')
 parser.add_argument('--batch_size', type=int, default=2, help='batch size')
@@ -57,7 +56,6 @@ args = vars(parser.parse_args())
 DIR_INPUT = ''
 TRAIN_CSV_PATH = args["train_csv_path"]
 DIR_TRAIN = args["train_dir"]
-DIR_TEST = args["test_dir"]
 
 marking = pd.read_csv(TRAIN_CSV_PATH)
 bboxs = np.stack(marking['bbox'].apply(lambda x: np.fromstring(x[1:-1], sep=',')))
