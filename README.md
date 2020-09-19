@@ -29,6 +29,8 @@ For installing NVIDIA Apex run script:
 
 ```nvidia_apex_setup.sh```
 
-For training run:
+#### For training run:
 
-```python train.py```
+```python train.py --train_csv_path train.csv --train_dir train --test_dir test --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40```
+
+
