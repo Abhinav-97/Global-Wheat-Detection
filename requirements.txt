@@ -1,0 +1,16 @@
+numpy
+pandas
+opencv-python
+torch==1.4
+torchvision==0.5.0
+torchvision
+scikit-learn
+seaborn
+matplotlib
+albumentations==0.4.6
+effdet
+pycocotools
+jupyter
+timm
+omegaconf
+ensemble-boxes
