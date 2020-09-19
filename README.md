@@ -15,7 +15,7 @@ Our solution was to train [EfficientDet Architecture](https://github.com/rwightm
 * Some irregular sized bounding boxes were remove which allowed gave us stable training on the Dataset.
 * Training on 1024 size images done with batch size of 2 along with ReduceLROnPlateau scheduler.
 * Heavy Data Augmentation was done to increase training data.Augmentation techniques include Random Flips, Random Brightness, Random Cutouts and Random Sized crops. We also used   CutMix Mosaic Augmentation for better results.Images using Augmentation are shown.
-<p float="left">
+<p float="left" align="middle">
   <img src="images/Image_Augmented-3.jpeg" width="30%" />
   <img src="images/Image_Augmented-2.jpeg" width="30%" /> 
   <img src="images/Image_Augmented-1.jpeg" width="30%" /> 
@@ -33,4 +33,15 @@ For installing NVIDIA Apex run script:
 
 ```python train.py --train_csv_path train.csv --train_dir train --test_dir test --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40```
 
+## Inference Details
 
+* For inference Test time augmenatation was used which was ensmbled using [Weighted boxes fusion](https://github.com/ZFTurbo/Weighted-Boxes-Fusion).TTA techniques include horizontal flip, vertical flip and 90 degree rotations some TTA Images preidicted are shown below
+<p float="left" align="middle">
+  <img src="images/original.jpeg" width="40%" />
+  <img src="images/prediction.jpeg" width="40%" /> 
+</p>
+
+<p float="left" align="middle">
+  <img src="images/TTA-prediction.jpeg" width="40%" />
+  <img src="images/Deaugment-image.jpeg" width="40%" /> 
+</p>
