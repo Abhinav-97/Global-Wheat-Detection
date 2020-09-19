@@ -15,3 +15,8 @@ Our solution was to train [EfficientDet Architecture](https://github.com/rwightm
 * Some irregular sized bounding boxes were remove which allowed gave us stable training on the Dataset.
 * Training on 1024 size images done with batch size of 2 along with ReduceLROnPlateau scheduler.
 * Heavy Data Augmentation was done to increase training data.Augmentation techniques include Random Flips, Random Brightness, Random Cutouts and Random Sized crops. We also used   CutMix Mosaic Augmentation for better results.Images using Augmentation are shown.
+<p float="left">
+  <img src="images/Image_Augmented-3.jpeg" width="25%" />
+  <img src="images/Image_Augmented-2.jpeg" width="25%" /> 
+  <img src="images/Image_Augmented-1.jpeg" width="25%" /> 
+</p>
