@@ -52,4 +52,6 @@ For installing NVIDIA Apex run script:
 * Finally to further boost model performance we make predictions with TTA and then train model with pseudo labelling.Then the final predictions are made with the pseudo labelled trained model.
 
 #### To run pseudo labelling:
+```python Inference_pseudo_labelling.py --train_csv_path train.csv --train_dir train --test_dir test --model_path best-checkpoint.bin --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40 ```
 
+## Final Prediction Images
