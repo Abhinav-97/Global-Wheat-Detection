@@ -37,13 +37,13 @@ For installing NVIDIA Apex run script:
 
 * For inference Test time augmenatation was used which was ensmbled using [Weighted boxes fusion](https://github.com/ZFTurbo/Weighted-Boxes-Fusion).TTA techniques include horizontal flip, vertical flip and 90 degree rotations some TTA Images preidicted are shown below
 <p float="left" align="middle">
-  <img src="images/original.jpeg" width="40%" />
-  <img src="images/prediction.jpeg" width="40%" /> 
+  <img src="images/original.jpeg" width="30%" />
+  <img src="images/prediction.jpeg" width="30%" /> 
 </p>
 
 <p float="left" align="middle">
-  <img src="images/TTA-prediction.jpeg" width="40%" />
-  <img src="images/Deaugment-image.jpeg" width="40%" /> 
+  <img src="images/TTA-prediction.jpeg" width="30%" />
+  <img src="images/Deaugment-image.jpeg" width="30%" /> 
 </p>
 
 #### To run predictions with TTA:
@@ -55,3 +55,15 @@ For installing NVIDIA Apex run script:
 ```python Inference_pseudo_labelling.py --train_csv_path train.csv --train_dir train --test_dir test --model_path best-checkpoint.bin --weights_path efficientdet_d5-ef44aea8.pth --image_size 1024 --batch_size 2 --epochs 40 ```
 
 ## Final Prediction Images
+
+<p float="left" align="middle">
+  <img src="images/Final_prediction.png" width="30%" />
+  <img src="images/Final_prediction_2.png" width="30%" /> 
+ <img src="images/Final_prediction_3.png" width="30%" /> 
+</p>
+
+<p float="left" align="middle">
+  <img src="images/Final_prediction_4.png" width="30%" />
+  <img src="images/Final_prediction_5.png" width="30%" /> 
+  <img src="images/Final_prediction_6.png" width="30%" /> 
+</p>
